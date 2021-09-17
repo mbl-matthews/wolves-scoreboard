@@ -13,7 +13,7 @@
               </v-col>
             </v-row>
             <v-row justify="center" align="center" no-gutters>
-              <v-col>
+              <v-col class="d-flex justify-center">
                 <span style="font-size: 16rem">
                   {{ this.homeScore }}
                 </span>
@@ -39,7 +39,7 @@
               </v-col>
             </v-row>
             <v-row justify="center" align="center" no-gutters>
-              <v-col>
+              <v-col class="d-flex justify-center">
                 <span style="font-size: 16rem">
                   {{ this.awayScore }}
                 </span>
