@@ -18,6 +18,12 @@
 
       <v-spacer></v-spacer>
 
+      <v-btn class="mr-3" color="secondary" to="/">
+        <v-icon >mdi-scoreboard-outline</v-icon>
+      </v-btn>
+      <v-btn class="mr-3" color="secondary" to="/console">
+        <v-icon >mdi-console</v-icon>
+      </v-btn>
       <span class="mr-2 text-h4">{{ this.date }}</span>
     </v-app-bar>
 
