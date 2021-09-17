@@ -15,7 +15,7 @@
             <v-row justify="center" align="center" no-gutters>
               <v-col class="d-flex justify-center">
                 <span style="font-size: 16rem" class="font-weight-bold">
-                  {{ getHomeScore }}
+                  {{ this.homeScore }}
                 </span>
               </v-col>
             </v-row>
@@ -41,7 +41,7 @@
             <v-row justify="center" align="center" no-gutters>
               <v-col class="d-flex justify-center">
                 <span style="font-size: 16rem" class="font-weight-bold">
-                  {{ getAwayScore }}
+                  {{ awayScore }}
                 </span>
               </v-col>
             </v-row>
@@ -53,15 +53,27 @@
 </template>
 
 <script>
-import {mapGetters} from "vuex";
 
 export default {
   name: "Scoreboard",
   data: () => ({
-    homeScore: 34,
-    awayScore: 14,
+    homeScore: 0,
+    awayScore: 0,
   }),
-  computed: mapGetters(["getHomeScore", "getAwayScore"])
+  mounted() {
+    let hs = localStorage.getItem("homeScore") || 0;
+    localStorage.setItem("homeScore", hs)
+    this.homeScore = hs
+    let asc = localStorage.getItem("awayScore") || 0;
+    localStorage.setItem("homeScore", asc)
+    this.awayScore = asc
+
+    window.onstorage = () => {
+      console.log("Storage changed!")
+      this.homeScore = localStorage.getItem("homeScore") || 0
+      this.awayScore = localStorage.getItem("awayScore") || 0
+    }
+  }
 }
 </script>
 

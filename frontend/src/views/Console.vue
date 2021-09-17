@@ -78,7 +78,7 @@ export default {
         this.showSnackbar("Wert muss eine positive Zahl sein!", "error")
         return
       }
-      this.$store.commit("setHomeScore", this.homeInput)
+      localStorage.setItem("homeScore", this.homeInput)
 
       console.log(this.$store.state.homeScore)
       this.showSnackbar("Wolves Punktestand übernommen", "success")
@@ -89,7 +89,7 @@ export default {
         this.showSnackbar("Wert muss eine positive Zahl sein!", "error")
         return
       }
-      this.$store.commit("setAwayScore", this.awayInput)
+      localStorage.setItem("awayScore", this.awayInput)
 
       this.showSnackbar("Gast Punktestand übernommen", "success")
     },
