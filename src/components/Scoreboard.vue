@@ -41,7 +41,7 @@
             <v-row justify="center" align="center" no-gutters>
               <v-col>
                 <span style="font-size: 16rem">
-                  {{ this.homeScore }}
+                  {{ this.awayScore }}
                 </span>
               </v-col>
             </v-row>
