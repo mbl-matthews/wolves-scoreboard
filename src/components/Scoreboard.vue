@@ -15,7 +15,7 @@
             <v-row justify="center" align="center" no-gutters>
               <v-col class="d-flex justify-center">
                 <span style="font-size: 16rem" class="font-weight-bold">
-                  {{ this.homeScore }}
+                  {{ this.$store.getters.getHomeScore }}
                 </span>
               </v-col>
             </v-row>
@@ -41,7 +41,7 @@
             <v-row justify="center" align="center" no-gutters>
               <v-col class="d-flex justify-center">
                 <span style="font-size: 16rem" class="font-weight-bold">
-                  {{ this.awayScore }}
+                  {{ this.$store.getters.getAwayScore }}
                 </span>
               </v-col>
             </v-row>
