@@ -15,7 +15,7 @@
             <v-row justify="center" align="center" no-gutters>
               <v-col class="d-flex justify-center">
                 <span style="font-size: 16rem" class="font-weight-bold">
-                  {{ this.$store.getters.getHomeScore }}
+                  {{ getHomeScore }}
                 </span>
               </v-col>
             </v-row>
@@ -41,7 +41,7 @@
             <v-row justify="center" align="center" no-gutters>
               <v-col class="d-flex justify-center">
                 <span style="font-size: 16rem" class="font-weight-bold">
-                  {{ this.$store.getters.getAwayScore }}
+                  {{ getAwayScore }}
                 </span>
               </v-col>
             </v-row>
@@ -53,12 +53,15 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex";
+
 export default {
   name: "Scoreboard",
   data: () => ({
     homeScore: 34,
     awayScore: 14,
   }),
+  computed: mapGetters(["getHomeScore", "getAwayScore"])
 }
 </script>
 
