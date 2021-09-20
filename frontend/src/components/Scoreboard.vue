@@ -2,19 +2,21 @@
   <v-container fluid>
     <v-row class="ma-5" dense align="center" justify="center">
       <v-col cols="5">
-        <v-card elevation="10" outlined>
-          <v-container>
+        <v-card elevation="10" outlined color="#EEEEEE">
+          <v-container fluid>
             <v-row align="center" justify="center" no-gutters>
               <v-col>
                 <v-img
+                    contain
                     src="@/assets/wolves.png"
-                    width="100%"
+                    width="92.5%"
+                    class="mx-auto"
                 />
               </v-col>
             </v-row>
             <v-row justify="center" align="center" no-gutters>
               <v-col class="d-flex justify-center">
-                <span style="font-size: 6rem" class="font-weight-bold">
+                <span style="font-size: 15rem" class="ma-n16 font-weight-bold">
                   {{ this.homeScore }}
                 </span>
               </v-col>
@@ -28,19 +30,21 @@
         />
       </v-col>
       <v-col cols="5">
-        <v-card elevation="10" outlined class="">
+        <v-card elevation="10" outlined color="#EEEEEE">
           <v-container>
             <v-row align="center" justify="center" no-gutters>
               <v-col>
                 <v-img
+                    contain
                     src="@/assets/gast.png"
-                    width="100%"
+                    width="92.5%"
+                    class="mx-auto"
                 />
               </v-col>
             </v-row>
             <v-row justify="center" align="center" no-gutters>
               <v-col class="d-flex justify-center">
-                <span style="font-size: 6rem" class="font-weight-bold">
+                <span style="font-size: 15rem" class="ma-n16 font-weight-bold">
                   {{ awayScore }}
                 </span>
               </v-col>
