@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <my-app-bar></my-app-bar>
     <v-row align="center" justify="center">
       <v-col cols="10">
         <v-card elevation="10">
@@ -60,7 +61,9 @@
 </template>
 
 <script>
+import MyAppBar from '../components/MyAppBar.vue'
 export default {
+  components: { MyAppBar },
   name: 'Console',
   data: () => ({
     homeInput: 0,
