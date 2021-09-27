@@ -9,14 +9,14 @@
                 <v-img
                     contain
                     src="@/assets/wolves.png"
-                    width="92.5%"
                     class="mx-auto"
+                    width="95%"
                 />
               </v-col>
             </v-row>
             <v-row justify="center" align="center" no-gutters>
               <v-col class="d-flex justify-center">
-                <span style="font-size: 15rem" class="ma-n16 font-weight-bold">
+                <span style="font-size: 20rem" class="ma-n16 font-weight-bold">
                   {{ this.homeScore }}
                 </span>
               </v-col>
@@ -36,15 +36,15 @@
               <v-col>
                 <v-img
                     contain
-                    src="@/assets/gast.png"
-                    width="92.5%"
+                    src="@/assets/raptors.png"
                     class="mx-auto"
+                    width="95%"
                 />
               </v-col>
             </v-row>
             <v-row justify="center" align="center" no-gutters>
               <v-col class="d-flex justify-center">
-                <span style="font-size: 15rem" class="ma-n16 font-weight-bold">
+                <span style="font-size: 20rem" class="ma-n16 font-weight-bold">
                   {{ awayScore }}
                 </span>
               </v-col>
