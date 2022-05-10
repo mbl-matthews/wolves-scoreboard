@@ -8,7 +8,7 @@
               <v-col>
                 <v-img
                     contain
-                    src="@/assets/wolves.png"
+                    :src="require('@/assets/teams/' + homeLogo)"
                     class="mx-auto"
                     width="95%"
                 />
@@ -38,7 +38,7 @@
               <v-col>
                 <v-img
                     contain
-                    src="@/assets/raptors.png"
+                    :src="require('@/assets/teams/' + awayLogo)"
                     class="mx-auto"
                     width="95%"
                 />
@@ -140,21 +140,33 @@ export default {
   data: () => ({
     homeScore: 0,
     awayScore: 0,
+    homeLogo: "",
+    awayLogo: "",
   }),
   mounted() {
+    const defLogo = "wolves.png"
+
     let hs = localStorage.getItem("homeScore") || 0;
     localStorage.setItem("homeScore", hs)
     this.homeScore = hs
     let asc = localStorage.getItem("awayScore") || 0;
     localStorage.setItem("homeScore", asc)
     this.awayScore = asc
+    let hl = localStorage.getItem("homeLogo") || defLogo;
+    localStorage.setItem("homeLogo", hl)
+    this.homeLogo = hl
+    let al = localStorage.getItem("awayLogo") || defLogo;
+    localStorage.setItem("awayLogo", al)
+    this.awayLogo = al
 
     window.onstorage = () => {
       console.log("Storage changed!")
       this.homeScore = localStorage.getItem("homeScore") || 0
       this.awayScore = localStorage.getItem("awayScore") || 0
+      this.homeLogo = localStorage.getItem("homeLogo") || defLogo
+      this.awayLogo = localStorage.getItem("awayLogo") || defLogo
     }
-  }
+  },
 }
 </script>
 

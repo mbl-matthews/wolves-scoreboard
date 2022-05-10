@@ -30,5 +30,10 @@
 <script>
 export default {
   name: "MyAppBar",
+  data() {
+    return {
+      date: new Date().toLocaleDateString("de-DE", {year: "numeric", month: "long", day: "numeric"})
+    }
+  },
 }
 </script>
